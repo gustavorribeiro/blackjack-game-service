@@ -1,3 +1,5 @@
+import org.springframework.boot.gradle.tasks.run.BootRun
+
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '2.7.11'
@@ -15,6 +17,12 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+
+task run(type: JavaExec, dependsOn: 'classes') {
+	classpath = sourceSets.main.runtimeClasspath
+	main = 'com.blackjack.blackjackgameservice.BlackjackApplication'
 }
 
 tasks.named('test') {
