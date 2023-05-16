@@ -20,7 +20,7 @@ public class DeckService {
         }
     }
 
-    public void Shuffle() {
+    public void shuffle() {
         Collections.shuffle(cards, new Random());
     }
 
