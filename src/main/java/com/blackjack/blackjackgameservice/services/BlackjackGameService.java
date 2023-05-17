@@ -1,6 +1,5 @@
 package com.blackjack.blackjackgameservice.services;
 
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 
 public class BlackjackGameService {
@@ -17,6 +16,7 @@ public class BlackjackGameService {
 
         while (true) {
             System.out.println("======== New Game ========");
+            player.renewHandCards();
             deck.shuffle();
             player.addCard(deck.drawCard());
             player.addCard(deck.drawCard());
@@ -31,7 +31,7 @@ public class BlackjackGameService {
             }
 
             while (player.getPoints() < 21) {
-                System.out.print("Do you want to hit (draw another card) OR shuffle deck? (Y/N/S): ");
+                System.out.print("Do you want to hit (draw another card) (Y/N) OR shuffle deck? (S): ");
                 String choice = scanner.nextLine().toUpperCase();
                 System.out.println("Your choice is: " + choice);
 

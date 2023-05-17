@@ -16,6 +16,10 @@ public class PlayerService {
         hand.add(card);
     }
 
+    public void renewHandCards() {
+        hand.removeAll(hand);
+    }
+
     public int getPoints() {
         int points = 0;
         int aceCount = 0;
