@@ -38,7 +38,7 @@ public class BlackjackGameService {
                 if (choice.equals("Y")) {
                     CardsService card = deck.drawCard();
                     player.addCard(card);
-                    System.out.println("Player drew: " + card.getRank() + "of" + card.getSuit());
+                    System.out.println("Player drew: " + card.getRank() + " of " + card.getSuit());
                     System.out.println("Total points: " + player.getPoints());
                     if (player.isBust()) {
                         System.out.println("Bust player loses!");
