@@ -23,7 +23,7 @@ public class DeckServiceTest {
     }
 
     @Test
-    public void testShuffle() {
+    public void testShuffle_shouldShuffleDeck() {
         List<CardsService> initialCards = deck.getCards();
         deck.shuffle();
         List<CardsService> shuffledCards = deck.getCards();
@@ -31,7 +31,7 @@ public class DeckServiceTest {
     }
 
     @Test
-    public void testDrawCard() {
+    public void testDrawCard_shouldRemoveOneCardOfDeck() {
         int initialSize = deck.getCards().size();
         CardsService card = deck.drawCard();
         assertNotNull(card);

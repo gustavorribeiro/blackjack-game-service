@@ -25,6 +25,7 @@ public class DeckService {
     }
 
     public CardsService drawCard() {
+        //Removes one card of deck
         if (cards.isEmpty()) {
             return null;
         }
