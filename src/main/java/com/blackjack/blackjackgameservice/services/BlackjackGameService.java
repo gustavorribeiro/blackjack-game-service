@@ -31,7 +31,7 @@ public class BlackjackGameService {
             }
 
             while (player.getPoints() < 21) {
-                System.out.print("Do you want to hit (draw another card) OR flush deck? (Y/N/F): ");
+                System.out.print("Do you want to hit (draw another card) OR shuffle deck? (Y/N/S): ");
                 String choice = scanner.nextLine().toUpperCase();
                 System.out.println("Your choice is: " + choice);
 
@@ -50,11 +50,11 @@ public class BlackjackGameService {
                 } else if (choice.equals("N") || choice.isEmpty() || choice.isBlank()) {
                     System.out.println("See you next game! Bye.");
                     break;
-                } else if (choice.equals("F")) {
+                } else if (choice.equals("S")) {
                     deck.shuffle();
                     System.out.println("Your cars has been shuffled!");
                 } else {
-                    System.out.println("Invalid input. Please enter Y or N or F.");
+                    System.out.println("Invalid input. Please enter Y or N or S.");
                 }
             }
             System.out.println("Do you want to play again? (Y/N): ");
