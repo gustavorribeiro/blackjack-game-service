@@ -31,4 +31,8 @@ public class DeckService {
         return cards.remove(cards.size() - 1);
     }
 
+    public List<CardsService> getCards() {
+        return new ArrayList<>(cards);
+    }
+
 }
