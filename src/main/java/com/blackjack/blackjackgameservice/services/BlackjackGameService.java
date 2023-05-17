@@ -32,7 +32,7 @@ public class BlackjackGameService {
 
             while (player.getPoints() < 21) {
                 System.out.print("Do you want to hit (draw another card) OR flush deck? (Y/N/F): ");
-                String choice = scanner.nextLine();
+                String choice = scanner.nextLine().toUpperCase();
                 System.out.println("Your choice is: " + choice);
 
                 if (choice.equals("Y")) {
@@ -58,7 +58,7 @@ public class BlackjackGameService {
                 }
             }
             System.out.println("Do you want to play again? (Y/N): ");
-            String playAgain = scanner.nextLine();
+            String playAgain = scanner.nextLine().toUpperCase();
 
             if (!playAgain.equals("Y")) {
                 break;
