@@ -20,6 +20,10 @@ public class PlayerService {
         hand.removeAll(hand);
     }
 
+    public List<CardsService> getHand() {
+        return new ArrayList<>(hand);
+    }
+
     public int getPoints() {
         int points = 0;
         int aceCount = 0;
@@ -47,6 +51,4 @@ public class PlayerService {
             System.out.println(card);
         }
     }
-
-
 }
